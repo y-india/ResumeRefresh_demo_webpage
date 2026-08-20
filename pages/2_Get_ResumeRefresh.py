@@ -154,10 +154,34 @@ st.write("")
 # DOWNLOAD BUTTON
 # --------------------------------------------------
 
-st.link_button(
-    "⬇️ Download ResumeRefresh",
-    DOWNLOAD_URL,
-    use_container_width=True,
+st.markdown(
+    f"""
+    <div style="text-align:center;">
+        <a
+            href="{DOWNLOAD_URL}"
+            target="_blank"
+            onclick="gtag('event', 'resume_download', {{
+                'event_category': 'ResumeRefresh',
+                'event_label': 'ZIP Download'
+            }});"
+            style="
+                display:block;
+                width:100%;
+                padding:14px;
+                background:#16a34a;
+                color:white;
+                text-decoration:none;
+                border-radius:8px;
+                font-weight:700;
+                text-align:center;
+                box-sizing:border-box;
+            "
+        >
+            ⬇️ Download ResumeRefresh
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True,
 )
 
 st.markdown(
@@ -321,10 +345,34 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.link_button(
-    "⬇️ Download ResumeRefresh",
-    DOWNLOAD_URL,
-    use_container_width=True,
+st.markdown(
+    f"""
+    <div style="text-align:center;">
+        <a
+            href="{DOWNLOAD_URL}"
+            target="_blank"
+            onclick="gtag('event', 'resume_download', {{
+                'event_category': 'ResumeRefresh',
+                'event_label': 'ZIP Download'
+            }});"
+            style="
+                display:block;
+                width:100%;
+                padding:14px;
+                background:#16a34a;
+                color:white;
+                text-decoration:none;
+                border-radius:8px;
+                font-weight:700;
+                text-align:center;
+                box-sizing:border-box;
+            "
+        >
+            ⬇️ Download ResumeRefresh
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True,
 )
 
 st.write("")
