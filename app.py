@@ -10,6 +10,26 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
+
+
+st.markdown(
+    """
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W79K4X5CLT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W79K4X5CLT');
+    </script>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+
+
+
+
 BG = "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
 
 VIDEO = "https://drive.google.com/file/d/1iRTUmA8HIrFFF0e5GPoR8Gl6voH3RJ-7/preview"
@@ -114,6 +134,15 @@ st.markdown(CSS, unsafe_allow_html=True)
 # --------------------------------------------------
 # HELPERS
 # --------------------------------------------------
+def get_resumerefresh(key):
+    if st.button(
+        "⬇️ Get ResumeRefresh",
+        key=key,
+        use_container_width=True,
+    ):
+        st.switch_page("pages/2_Get_ResumeRefresh.py")
+
+
 
 def signin(key):
     if st.button(
@@ -147,7 +176,7 @@ def card(icon, title, text):
 # TOP OF PAGE
 # --------------------------------------------------
 
-signin("top_signin")
+get_resumerefresh("top_get_resumerefresh")
 
 st.markdown("""
 <style>
@@ -252,7 +281,7 @@ st.write("")
 st.divider()
 
 st.write("")
-signin("bottom_signin")
+get_resumerefresh("bottom_get_resumerefresh")
 st.write("")
 
 # --------------------------------------------------
