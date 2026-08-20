@@ -6,24 +6,23 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-
-
-
-st.markdown(
+st.html(
     """
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W79K4X5CLT"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'G-W79K4X5CLT');
     </script>
     """,
-    unsafe_allow_html=True,
+    unsafe_allow_javascript=True,
 )
-
-
-
 
 
 # --------------------------------------------------
